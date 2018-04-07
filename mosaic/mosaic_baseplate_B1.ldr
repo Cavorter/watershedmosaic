@@ -1,0 +1,22 @@
+0 MosaicBaseplate
+0 Name: mosaic_baseplate_B1.ldr
+0 Author: 
+
+ 1 0  800 0 320  1 0 0 0 1 0 0 0 1 mosaic_B1_5_2.ldr
+ 1 0  480 0 480  1 0 0 0 1 0 0 0 1 mosaic_B1_3_3.ldr
+ 1 0  640 0 480  1 0 0 0 1 0 0 0 1 mosaic_B1_4_3.ldr
+ 1 0  800 0 480  1 0 0 0 1 0 0 0 1 mosaic_B1_5_3.ldr
+ 1 0  160 0 640  1 0 0 0 1 0 0 0 1 mosaic_B1_1_4.ldr
+ 1 0  320 0 640  1 0 0 0 1 0 0 0 1 mosaic_B1_2_4.ldr
+ 1 0  480 0 640  1 0 0 0 1 0 0 0 1 mosaic_B1_3_4.ldr
+ 1 0  640 0 640  1 0 0 0 1 0 0 0 1 mosaic_B1_4_4.ldr
+0 STEP
+ 1 0  800 0 640  1 0 0 0 1 0 0 0 1 mosaic_B1_5_4.ldr
+ 1 0  0 0 800  1 0 0 0 1 0 0 0 1 mosaic_B1_0_5.ldr
+ 1 0  160 0 800  1 0 0 0 1 0 0 0 1 mosaic_B1_1_5.ldr
+ 1 0  320 0 800  1 0 0 0 1 0 0 0 1 mosaic_B1_2_5.ldr
+ 1 0  480 0 800  1 0 0 0 1 0 0 0 1 mosaic_B1_3_5.ldr
+ 1 0  640 0 800  1 0 0 0 1 0 0 0 1 mosaic_B1_4_5.ldr
+ 1 0  800 0 800  1 0 0 0 1 0 0 0 1 mosaic_B1_5_5.ldr
+0 STEP
+0

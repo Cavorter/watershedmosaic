@@ -1,0 +1,48 @@
+﻿.Table {
+    display: table;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.Title {
+    display: table-caption;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.Heading {
+    display: table-row;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Row{
+    display: table-row;
+}
+
+.Cell {
+    display: table-cell;
+    border: solid;
+    border-width: thin;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+a.blank {
+    color: white;
+}
+
+h1 {
+    text-align: center
+}
+
+h2 {
+    text-align: center
+}
+
+img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}

@@ -1,0 +1,25 @@
+0 MosaicBaseplate
+0 Name: mosaic_baseplate_C5.ldr
+0 Author: 
+
+ 1 0  0 0 0  1 0 0 0 1 0 0 0 1 mosaic_C5_0_0.ldr
+ 1 0  160 0 0  1 0 0 0 1 0 0 0 1 mosaic_C5_1_0.ldr
+ 1 0  0 0 160  1 0 0 0 1 0 0 0 1 mosaic_C5_0_1.ldr
+ 1 0  160 0 160  1 0 0 0 1 0 0 0 1 mosaic_C5_1_1.ldr
+ 1 0  0 0 320  1 0 0 0 1 0 0 0 1 mosaic_C5_0_2.ldr
+ 1 0  160 0 320  1 0 0 0 1 0 0 0 1 mosaic_C5_1_2.ldr
+ 1 0  0 0 480  1 0 0 0 1 0 0 0 1 mosaic_C5_0_3.ldr
+ 1 0  160 0 480  1 0 0 0 1 0 0 0 1 mosaic_C5_1_3.ldr
+ 1 0  320 0 480  1 0 0 0 1 0 0 0 1 mosaic_C5_2_3.ldr
+ 1 0  480 0 480  1 0 0 0 1 0 0 0 1 mosaic_C5_3_3.ldr
+0 STEP
+ 1 0  0 0 640  1 0 0 0 1 0 0 0 1 mosaic_C5_0_4.ldr
+ 1 0  160 0 640  1 0 0 0 1 0 0 0 1 mosaic_C5_1_4.ldr
+ 1 0  320 0 640  1 0 0 0 1 0 0 0 1 mosaic_C5_2_4.ldr
+ 1 0  480 0 640  1 0 0 0 1 0 0 0 1 mosaic_C5_3_4.ldr
+ 1 0  0 0 800  1 0 0 0 1 0 0 0 1 mosaic_C5_0_5.ldr
+ 1 0  160 0 800  1 0 0 0 1 0 0 0 1 mosaic_C5_1_5.ldr
+ 1 0  320 0 800  1 0 0 0 1 0 0 0 1 mosaic_C5_2_5.ldr
+ 1 0  480 0 800  1 0 0 0 1 0 0 0 1 mosaic_C5_3_5.ldr
+0 STEP
+0

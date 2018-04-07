@@ -1,0 +1,24 @@
+0 AllMosaics
+0 Name: all_mosaics.ldr
+0 Author: Steve Demlow
+
+ 1 0  960 0 0  1 0 0 0 1 0 0 0 1 mosaic_baseplate_A2.ldr
+ 1 0  1920 0 0  1 0 0 0 1 0 0 0 1 mosaic_baseplate_A3.ldr
+ 1 0  2880 0 0  1 0 0 0 1 0 0 0 1 mosaic_baseplate_A4.ldr
+ 1 0  3840 0 0  1 0 0 0 1 0 0 0 1 mosaic_baseplate_A5.ldr
+ 1 0  0 0 960  1 0 0 0 1 0 0 0 1 mosaic_baseplate_B1.ldr
+ 1 0  960 0 960  1 0 0 0 1 0 0 0 1 mosaic_baseplate_B2.ldr
+ 1 0  1920 0 960  1 0 0 0 1 0 0 0 1 mosaic_baseplate_B3.ldr
+ 1 0  2880 0 960  1 0 0 0 1 0 0 0 1 mosaic_baseplate_B4.ldr
+ 1 0  3840 0 960  1 0 0 0 1 0 0 0 1 mosaic_baseplate_B5.ldr
+0 STEP
+ 1 0  0 0 1920  1 0 0 0 1 0 0 0 1 mosaic_baseplate_C1.ldr
+ 1 0  960 0 1920  1 0 0 0 1 0 0 0 1 mosaic_baseplate_C2.ldr
+ 1 0  1920 0 1920  1 0 0 0 1 0 0 0 1 mosaic_baseplate_C3.ldr
+ 1 0  2880 0 1920  1 0 0 0 1 0 0 0 1 mosaic_baseplate_C4.ldr
+ 1 0  3840 0 1920  1 0 0 0 1 0 0 0 1 mosaic_baseplate_C5.ldr
+ 1 0  1920 0 2880  1 0 0 0 1 0 0 0 1 mosaic_baseplate_D3.ldr
+ 1 0  2880 0 2880  1 0 0 0 1 0 0 0 1 mosaic_baseplate_D4.ldr
+ 1 0  3840 0 2880  1 0 0 0 1 0 0 0 1 mosaic_baseplate_D5.ldr
+0 STEP
+0

@@ -1,0 +1,36 @@
+0 MosaicBaseplate
+0 Name: mosaic_baseplate_C1.ldr
+0 Author: 
+
+ 1 0  0 0 0  1 0 0 0 1 0 0 0 1 mosaic_C1_0_0.ldr
+ 1 0  160 0 0  1 0 0 0 1 0 0 0 1 mosaic_C1_1_0.ldr
+ 1 0  320 0 0  1 0 0 0 1 0 0 0 1 mosaic_C1_2_0.ldr
+ 1 0  480 0 0  1 0 0 0 1 0 0 0 1 mosaic_C1_3_0.ldr
+ 1 0  640 0 0  1 0 0 0 1 0 0 0 1 mosaic_C1_4_0.ldr
+ 1 0  800 0 0  1 0 0 0 1 0 0 0 1 mosaic_C1_5_0.ldr
+ 1 0  0 0 160  1 0 0 0 1 0 0 0 1 mosaic_C1_0_1.ldr
+ 1 0  160 0 160  1 0 0 0 1 0 0 0 1 mosaic_C1_1_1.ldr
+ 1 0  320 0 160  1 0 0 0 1 0 0 0 1 mosaic_C1_2_1.ldr
+ 1 0  480 0 160  1 0 0 0 1 0 0 0 1 mosaic_C1_3_1.ldr
+0 STEP
+ 1 0  640 0 160  1 0 0 0 1 0 0 0 1 mosaic_C1_4_1.ldr
+ 1 0  800 0 160  1 0 0 0 1 0 0 0 1 mosaic_C1_5_1.ldr
+ 1 0  0 0 320  1 0 0 0 1 0 0 0 1 mosaic_C1_0_2.ldr
+ 1 0  160 0 320  1 0 0 0 1 0 0 0 1 mosaic_C1_1_2.ldr
+ 1 0  320 0 320  1 0 0 0 1 0 0 0 1 mosaic_C1_2_2.ldr
+ 1 0  480 0 320  1 0 0 0 1 0 0 0 1 mosaic_C1_3_2.ldr
+ 1 0  640 0 320  1 0 0 0 1 0 0 0 1 mosaic_C1_4_2.ldr
+ 1 0  800 0 320  1 0 0 0 1 0 0 0 1 mosaic_C1_5_2.ldr
+ 1 0  160 0 480  1 0 0 0 1 0 0 0 1 mosaic_C1_1_3.ldr
+ 1 0  320 0 480  1 0 0 0 1 0 0 0 1 mosaic_C1_2_3.ldr
+0 STEP
+ 1 0  480 0 480  1 0 0 0 1 0 0 0 1 mosaic_C1_3_3.ldr
+ 1 0  640 0 480  1 0 0 0 1 0 0 0 1 mosaic_C1_4_3.ldr
+ 1 0  800 0 480  1 0 0 0 1 0 0 0 1 mosaic_C1_5_3.ldr
+ 1 0  320 0 640  1 0 0 0 1 0 0 0 1 mosaic_C1_2_4.ldr
+ 1 0  480 0 640  1 0 0 0 1 0 0 0 1 mosaic_C1_3_4.ldr
+ 1 0  640 0 640  1 0 0 0 1 0 0 0 1 mosaic_C1_4_4.ldr
+ 1 0  800 0 640  1 0 0 0 1 0 0 0 1 mosaic_C1_5_4.ldr
+ 1 0  480 0 800  1 0 0 0 1 0 0 0 1 mosaic_C1_3_5.ldr
+0 STEP
+0

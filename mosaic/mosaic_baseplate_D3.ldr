@@ -1,0 +1,10 @@
+0 MosaicBaseplate
+0 Name: mosaic_baseplate_D3.ldr
+0 Author: 
+
+ 1 0  480 0 0  1 0 0 0 1 0 0 0 1 mosaic_D3_3_0.ldr
+ 1 0  640 0 0  1 0 0 0 1 0 0 0 1 mosaic_D3_4_0.ldr
+ 1 0  800 0 0  1 0 0 0 1 0 0 0 1 mosaic_D3_5_0.ldr
+ 1 0  800 0 160  1 0 0 0 1 0 0 0 1 mosaic_D3_5_1.ldr
+0 STEP
+0
