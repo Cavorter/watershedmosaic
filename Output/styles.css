@@ -27,6 +27,11 @@
     border-width: thin;
     padding-left: 5px;
     padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.Cell.qty {
+    text-align: center;
 }
 
 a.blank {

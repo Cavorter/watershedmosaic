@@ -34,7 +34,8 @@ foreach ( $ldr in $ldrFiles ) {
     $renderTime += $result.Time
 
     if ( -not $SkipSnapshots ) {
-        Write-Html -Path $result.Output
+        $partList = Get-PartList -Path $ldr.FullName
+        Write-Html -Path $result.Output -PartsList $partList
     }
 }
 

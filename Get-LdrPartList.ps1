@@ -1,3 +1,6 @@
+$colorList = Get-Content -Path $PSScriptRoot\colors.json | ConvertFrom-Json
+. $PSScriptRoot\Get-LdrawPartName
+
 function Get-LdrPartList {
     [CmdletBinding()]
     Param(
@@ -21,7 +24,15 @@ function Get-LdrPartList {
         foreach ( $colorId in $colors ) {
             $list = $parts.Where({ $_.id -eq $partId -and $_.colorId -eq $colorId })
             if ( $list ) {
-                $part = New-Object -TypeName psobject -Property @{ id = $partId; colorId = $colorId; count = $list.Count }
+                $color = $colorList.Where( { $_.code -eq $colorId })
+                $propHash = @{
+                    partId = $partId
+                    partName = ( Get-LdrawPartName -PartId $partId )
+                    colorId = $colorId
+                    colorName = "$( $color.ldrawName ) ($( $color.legoName ))"
+                    partCount = $list.Count
+                }
+                $part = New-Object -TypeName psobject -Property $propHash
                 Write-Output $part
             }
         }
