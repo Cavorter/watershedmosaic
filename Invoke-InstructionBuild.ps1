@@ -14,9 +14,12 @@ $ldrFiles = Get-ChildItem -Path $PSScriptRoot\mosaic\mosaic*.ldr -Exclude mosaic
 
 $axisPoints = @{
     baseplate = @()
-    x = @()
-    y = @()
+    x         = @()
+    y         = @()
 }
+
+$exportSplat = @{ OutputPath = $outputPath }
+if ( $SkipSnapshots ) { $exportSplat.TestRun = [switch]$true }
 
 foreach ( $ldr in $ldrFiles ) {
     $points = $ldr.Name.Split('.')[0].Split('_')
@@ -24,12 +27,7 @@ foreach ( $ldr in $ldrFiles ) {
     $axisPoints.x += [int]$points[2]
     $axisPoints.y += [int]$points[3]
 
-    $exportSplat = @{
-        Path = $ldr.FullName
-        OutputPath = $outputPath
-    }
-
-    if ( $SkipSnapshots ) { $exportSplat.TestRun = [switch]$true }
+    $exportSplat.Path = $ldr.FullName
     $result = Export-Snapshots @exportSplat
     $renderTime += $result.Time
 
@@ -39,37 +37,54 @@ foreach ( $ldr in $ldrFiles ) {
     }
 }
 
-Write-Host "Total Render Time: $renderTime"
-
 $axisPoints.x = $axisPoints.x | Sort-Object -Unique
 $axisPoints.y = $axisPoints.y | Sort-Object -Unique
 
-$prefix = '<!DOCTYPE html><html><head><link rel="stylesheet" href="styles.css"></head><body><h1>Watershed Mosaic</h1><div class="Table">'
+$prefix = '<!DOCTYPE html><html><head><link rel="stylesheet" href="styles.css"></head><body><h1>Mosaic Instructions</h1><div class="Table">'
 $suffix = '</div></body></html>'
 
 $html = $prefix
 
-foreach ( $y in @('A','B','C','D') ) {
+foreach ( $y in @('A', 'B', 'C', 'D') ) {
     $html += "<div class='Row'>"
     foreach ( $x in @(1..5) ) {
         $baseplate = $y + $x
-        Write-Verbose "Processing baseplate $baseplate..."
-        $html += "<div class='Cell'><h2>$baseplate</h1>"
+        $fileNameBase = "towers_baseplate_$baseplate"
+        $ldrFile = "$PSScriptRoot\mosaic\$( $fileNameBase ).ldr"
+        if ( Test-Path -Path $ldrFile ) {
+            Write-Host "Found baseplate $baseplate..."
+            $html += "<div class='Cell' >"
 
-        $baseName = "mosaic_$baseplate"
-        foreach ( $innerY in @(0..5)) {
-            $html += "<div class='Row'>"
-            foreach ( $innerX in @(0..5)) {
-                $file = @( $baseName , $innerX , $innerY ) -join '_'
-                $anchorClass = "blank"
-                if ( Test-Path -Path "$outputPath\$file\$file.html" ) {
-                    $attr = "href='$file/$file.html'"
-                    $anchorClass = "filled"
-                }
+            #generate baseplate instructions
+            $exportSplat.Path = $ldrFile
+            $result = Export-Snapshots @exportSplat
+            $renderTime += $result.Time
         
-                $html += "<div class='Cell' ><a class='$anchorClass' $attr >$innerX $innerY</a></div>"
+            if ( -not $SkipSnapshots ) {
+                $partList = Get-PartList -Path $ldrFile
+                Write-Html -Path $result.Output -PartsList $partList
+            }
+        
+            $html += "<h2><a href='$fileNameBase/$( $fileNameBase ).html'>$baseplate</a></h2><div class='Table'>"
+            $baseName = "mosaic_$baseplate"
+            foreach ( $innerY in @(0..5)) {
+                $html += "<div class='Row'>"
+                foreach ( $innerX in @(0..5)) {
+                    $file = @( $baseName , $innerX , $innerY ) -join '_'
+                    if ( Test-Path -Path "$outputPath\$file\$file.html" ) {
+                        $html += "<div class='Cell' id='innerCell' >"
+                        $attr = "href='$file/$file.html'"
+                        $html += "<a class='$anchorClass' $attr >$innerX $innerY</a>"
+                    } else {
+                        $html += "<div class='Cell' id='blankCellInner' >"
+                    }
+                    $html += "</div>"
+                }
+                $html += "</div>"
             }
             $html += "</div>"
+        } else {
+            $html += "<div class='Cell' id='blankCell' >"
         }
         $html += "</div>"
     }
@@ -82,4 +97,5 @@ Copy-Item -Path ( Resolve-Path -Path $cssFile ) -Destination $outputPath
 
 $complete = Get-Date
 
+Write-Host "Total Render Time: $renderTime"
 Write-Host "Total Time:" ( $complete - $incept )
