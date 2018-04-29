@@ -21,7 +21,7 @@ function Write-Html {
 
     $name = $modelName.Split('_') -join ' '
     $prefix = "<html><head><link rel='stylesheet' href='../styles.css'></head><body><h1>$name</h1>"
-    $suffix = '</div></body></html>'
+    $suffix = "</div><div><p>Advanced Builders: <a href='mosaic/$modelName.ldr'>Download model file</a></p></div><div><a href='Output/index.html'>Return to Instructions</a></body></html>"
 
     $imageList = Get-ChildItem -Path $Path\*.png | Sort-Object -Property Name
 
@@ -32,7 +32,7 @@ function Write-Html {
         $html += "<h2>Parts List</h2>$PartsList"
     }
 
-    $html += "<div class='Table'>"
+    $html += "<div>&nbsp;</div><div class='Table'>"
 
     foreach ( $file in $imageList ) {
         $file.Name -match ".*\-Step(\d*)\.png" | Out-Null

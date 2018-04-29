@@ -5,8 +5,9 @@ Param(
 
 $incept = Get-Date
 
-. $PSScriptRoot\Write-Html.ps1
 . $PSScriptRoot\Export-Snapshots.ps1
+. $PSScriptRoot\Get-PartList.ps1
+. $PSScriptRoot\Write-Html.ps1
 
 $outputPath = "$PSScriptRoot\Output"
 
@@ -65,7 +66,7 @@ foreach ( $y in @('A', 'B', 'C', 'D') ) {
                 Write-Html -Path $result.Output -PartsList $partList
             }
         
-            $html += "<h2><a href='$fileNameBase/$( $fileNameBase ).html'>$baseplate</a></h2><div class='Table'>"
+            $html += "<h2><a href='baseparts/$( $fileNameBase ).html'>$baseplate</a></h2><div class='Table'>"
             $baseName = "mosaic_$baseplate"
             foreach ( $innerY in @(0..5)) {
                 $html += "<div class='Row'>"

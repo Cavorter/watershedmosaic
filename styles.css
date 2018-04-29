@@ -53,6 +53,10 @@ img {
 	display: block;
 }
 
+#imgMain {
+    align-self: center;
+}
+
 #innerCell {
     height: 32px;
     width: 32px;
