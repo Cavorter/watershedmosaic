@@ -11,7 +11,7 @@ Function Get-PartList {
     $suffix = "</div>"
     $content = ""
 
-    $parts = Get-LdrPartList -Path $Path | Sort-Object -Property colorId,id
+    $parts = Get-LdrPartList -Path $Path | Sort-Object -Property partName,colorId
     foreach ( $part in $parts ) {
         $content += "<div class='Row'><div class='Cell.qty'>$( $part.partCount )</div><div class='Cell'>$( $part.partName )</div><div class='Cell'>$( $part.colorName )</div></div>"
     }
